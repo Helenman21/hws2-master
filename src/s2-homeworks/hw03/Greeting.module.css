@@ -34,12 +34,14 @@
 	height: 36px;
 	border-radius: 3px;
 	margin-left: 5px;
+	color: white;
 }
 
 .button:focus {
 }
 
 .button:active {
+
 }
 
 .button:disabled {
