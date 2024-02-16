@@ -24,7 +24,8 @@
 
 .errorInput {
 	color: #CC0000;
-	
+	width: 352px;
+	height: 36px;
 }
 
 .button {
@@ -51,4 +52,5 @@
 }
 
 .greeting {
+	margin: 5px;
 }
