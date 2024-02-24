@@ -7,7 +7,7 @@
 
 .disabled {
 	background-color: #004D99;
-	
+	border: 1px solid #004D99;
 }
 
 .secondary {
