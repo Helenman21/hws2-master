@@ -1,4 +1,5 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react'
+import { restoreState } from '../../../hw06/localStorage/localStorage'
 import s from './SuperButton.module.css'
 
 // тип пропсов обычной кнопки, children в котором храниться название кнопки там уже описан
@@ -17,12 +18,24 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-    const finalClassName = s.button
-        // + (disabled
-        //         ? ...
-        //         : xType === 'red'
-        //             ? ...
-        + (className ? ' ' + className : '') // задачка на смешивание классов
+	console.log({
+		xType,
+		className,
+		disabled,
+		...restProps // все остальные пропсы попадут в объект restProps, там же будет children
+  })
+  	const classes = () => {
+		if(restProps.children === 'red'){
+			return s.red
+		}
+		if(restProps.children === 'secondary'){
+			return s.secondary
+		}
+		if(restProps.children === 'default' || restProps.children === 'disabled'){
+			return s.default
+		}
+	}	
+    const finalClassName =  s.button + " " + classes()
 
     return (
         <button
