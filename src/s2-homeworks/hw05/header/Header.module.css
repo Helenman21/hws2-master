@@ -11,6 +11,7 @@
 	justify-content: space-between;
 	font-size: 24px;
 	z-index: 1;
+	box-shadow: 5px 10px 5px gray;
 }
 
 .header h1 {

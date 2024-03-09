@@ -2,10 +2,16 @@
 }
 
 .span {
+	height: 20px;
+	width: 70px;
 }
 
 .input {
+	height: 40px;
+	width: 280px;
 }
 
 .pen {
+	width: 24px;
+	height: 24px;
 }

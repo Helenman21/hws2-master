@@ -18,11 +18,12 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
+	console.log('xType', restProps)
   	const classes = () => {
-		if(restProps.children === 'red'){
+		if(restProps.children === 'red' ){
 			return s.red
 		}
-		if(restProps.children === 'secondary'){
+		if(restProps.children === 'secondary' ){
 			return s.secondary
 		}
 		if(restProps.children === 'default'){
@@ -30,6 +31,12 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 		}
 		if(restProps.children === 'disabled'){
 			return s.disabled
+		}
+		if(restProps.children === 'Save to ls'){
+			return s.buttonSave
+		}
+		if(restProps.children === 'Get from ls'){
+			return s.buttonRestore
 		}
 	}	
     const finalClassName =  s.button + " " + classes()
