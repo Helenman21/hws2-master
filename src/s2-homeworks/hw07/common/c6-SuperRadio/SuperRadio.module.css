@@ -4,10 +4,13 @@
 }
 
 .radio::before {
+    background:  #000000;
 }
 
 
 .radio:checked::before {
+    background:  #000000;
+
 }
 
 .label {
