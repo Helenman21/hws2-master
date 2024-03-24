@@ -38,6 +38,15 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 		if(restProps.children === 'Get from ls'){
 			return s.buttonRestore
 		}
+		if(restProps.children === 'Sort up'){
+			return s.buttonRestore
+		}
+		if(restProps.children === 'Sort down'){
+			return s.buttonRestore
+		}
+		if(restProps.children === 'Check 18+'){
+			return s.buttonRestore
+		}
 	}	
     const finalClassName =  s.button + " " + classes()
 
