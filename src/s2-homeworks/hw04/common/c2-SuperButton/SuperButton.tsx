@@ -20,13 +20,14 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 ) => {
 
   	const classes = () => {
+		  console.log(restProps.children)
 		if(restProps.children === 'red' ){
 			return s.red
 		}
 		if(restProps.children === 'secondary' ){
 			return s.secondary
 		}
-		if(restProps.children === 'default'){
+		if(restProps.children === 'default' || restProps.children ==='stop' || restProps.children ==='start'){
 			return s.default
 		}
 		if(restProps.children === 'disabled'){

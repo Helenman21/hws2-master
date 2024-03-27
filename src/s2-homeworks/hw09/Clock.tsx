@@ -78,15 +78,16 @@ function Clock() {
                     id={'hw9-button-start'}
                     disabled={timerId? true : false} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
-                    xType={'red'}
+                    xType={'default'}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
+                    xType={'default'}
                     disabled={timerId? false :true} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
-                    xType={'Save to ls'}
+
                 >
                     stop
                 </SuperButton>
