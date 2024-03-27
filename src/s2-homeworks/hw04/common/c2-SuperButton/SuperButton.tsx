@@ -18,7 +18,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-	console.log('xType', restProps)
+
   	const classes = () => {
 		if(restProps.children === 'red' ){
 			return s.red
