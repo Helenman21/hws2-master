@@ -33,7 +33,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 		if(restProps.children === 'disabled'){
 			return s.disabled
 		}
-		if(restProps.children === 'Save to ls'){
+		if(restProps.children === 'Save to ls' || restProps.children === 'Set loading...'){
 			return s.buttonSave
 		}
 		if(restProps.children === 'Get from ls'){
