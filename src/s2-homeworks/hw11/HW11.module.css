@@ -1,8 +1,15 @@
 .container {
+	width: 150px;
 }
 
 .wrapper {
+	position: relative;
 }
 
 .number {
+}
+.numberRight{
+	position: absolute;
+	right: -40px;
+	top: 5px;
 }
