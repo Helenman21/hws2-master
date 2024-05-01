@@ -19,7 +19,7 @@ const HW13 = () => {
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
-
+	 const disableButton = info === '...loading'
     const send = (x?: boolean | null) => () => {
         const url =
             x === null
@@ -36,10 +36,32 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                // дописать
-
+                // дописать...всё ок) код 200 - обычно означает что скорее всего всё ок)
+					 setText('...всё ок)')
+					 setInfo('код 200 - обычно означает что скорее всего все ок)')
+					
             })
             .catch((e) => {
+					//console.log(e);
+					if(e.message === "Request failed with status code 400"){
+						setCode('Ошибка 400!')
+						setText('Ты не отправил success в body вообще!')
+						setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+						setImage(error400)
+					}
+					if(e.message === "Request failed with status code 500"){
+						setCode('Ошибка 500!')
+						setText('эмитация ошибки на сервере')
+						setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+						setImage(error500)
+					}
+					if(e.message === "Network Error"){
+						setCode('Error!')
+						//Network Error AxiosError
+						setText('Network Error')
+						setInfo('AxiosError')
+						setImage(errorUnknown)
+					}
                 // дописать
 
             })
@@ -56,7 +78,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-
+								disabled={disableButton}	
                     >
                         Send true
                     </SuperButton>
@@ -65,7 +87,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-
+								disabled={disableButton}
                     >
                         Send false
                     </SuperButton>
@@ -74,6 +96,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
+								disabled={disableButton}
 
                     >
                         Send undefined
@@ -83,7 +106,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-
+								disabled={disableButton}
                     >
                         Send null
                     </SuperButton>

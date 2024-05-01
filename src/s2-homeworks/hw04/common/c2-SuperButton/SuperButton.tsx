@@ -20,7 +20,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 ) => {
 
   	const classes = () => {
-		  console.log(restProps.children)
+		//  console.log(restProps.children)
 		if(restProps.children === 'red' ){
 			return s.red
 		}
@@ -39,7 +39,9 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 		if(restProps.children === 'Get from ls'){
 			return s.buttonRestore
 		}
-		if(restProps.children === 'Sort up'){
+		if(restProps.children === 'Sort up' || restProps.children === 'Send true' ||
+		restProps.children === 'Send false' || restProps.children === 'Send undefined' || 
+		 restProps.children === 'Send null'){
 			return s.buttonRestore
 		}
 		if(restProps.children === 'Sort down'){

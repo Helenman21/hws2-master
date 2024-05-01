@@ -1,22 +1,37 @@
 .buttonsContainer {
+	
 }
 
 .responseContainer {
+	display: flex;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 30px;
 }
 
 .imageContainer {
 }
 
 .image {
+	margin-right: 30px;
 }
 
+
 .textContainer{
+    padding-top: 5%;
 }
 
 .code {
+	size: 30px;
+	margin: auto;
+	font-weight: 600;
+	text-align: left;
+	line-height: 37px;
 }
 
 .text {
+	text-align: left;
 }
 .info {
+	text-align: left;
 }

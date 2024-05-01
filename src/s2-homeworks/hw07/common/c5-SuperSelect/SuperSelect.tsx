@@ -22,7 +22,6 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     onChangeOption,
     ...restProps
 }) => {
-	console.log('restProps', restProps);
 	
     const mappedOptions: any[] = options
         ? options.map((o) => (
