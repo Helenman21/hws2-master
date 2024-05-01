@@ -22,6 +22,8 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     onChangeOption,
     ...restProps
 }) => {
+	console.log('restProps', restProps);
+	
     const mappedOptions: any[] = options
         ? options.map((o) => (
               <option
@@ -39,7 +41,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         // делают студенты
         const name = e.target.value
         if(name && onChangeOption){
-            onChangeOption(name)
+            onChangeOption(Number(name))
         }
     }
 

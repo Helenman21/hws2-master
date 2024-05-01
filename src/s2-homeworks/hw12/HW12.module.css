@@ -19,5 +19,12 @@ html {
 }
 
 .select {
+	background-color: var(--background);
+	color: var(--color);
+}
 
+h4 {
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: normal;
 }
