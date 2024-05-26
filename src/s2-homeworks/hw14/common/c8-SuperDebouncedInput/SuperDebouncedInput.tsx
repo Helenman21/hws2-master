@@ -33,7 +33,11 @@ const SuperDebouncedInput: React.FC<SuperDebouncedInputPropsType> = (
 
         if (onDebouncedChange) {
             // делает студент
-
+				clearTimeout(timerId);
+				//let timerIdNew = setTimeout(onDebouncedChange, 1500);
+				let timerIdNew = setTimeout(onDebouncedChange, 1500, value); 
+				console.log('timerIdNew', timerIdNew)  
+				setTimerId(Number(timerIdNew))         
             // остановить предыдущий таймер
             // запустить новый на 1500ms, в котором вызовется функция
 
